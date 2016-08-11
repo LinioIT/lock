@@ -1,0 +1,4 @@
+suites:
+    linio_suite:
+        namespace: Linio\Lock
+        psr4_prefix: Linio\Lock

@@ -1,0 +1,16 @@
+language: php
+
+php:
+  - 7.0
+
+before_install:
+  - travis_retry composer self-update
+
+install:
+  - travis_retry composer install --no-interaction --prefer-source --dev
+
+script:
+  - vendor/bin/phpspec run --config=phpspec.yml.dist --no-interaction
+
+matrix:
+  fast_finish: true

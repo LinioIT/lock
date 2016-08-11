@@ -1,0 +1,25 @@
+{
+    "name": "linio/lock",
+    "description": "Simple lock handler for cli applications",
+    "keywords": ["linio", "lock"],
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Linio\\Lock\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "spec\\Linio\\Lock\\": "spec"
+        }
+    },
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^3.0",
+        "mikey179/vfsStream": "^1.6"
+    }
+}
