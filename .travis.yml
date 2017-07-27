@@ -12,7 +12,7 @@ install:
 
 script:
   - vendor/bin/php-cs-fixer fix --dry-run -v
-  - vendor/bin/phpunit --verbose
+  - vendor/bin/phpspec run
 
 matrix:
   fast_finish: true
