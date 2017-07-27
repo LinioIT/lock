@@ -2,15 +2,17 @@ language: php
 
 php:
   - 7.0
-
-before_install:
-  - travis_retry composer self-update
+  
+cache:
+  directories:
+    - vendor
 
 install:
-  - travis_retry composer install --no-interaction --prefer-source --dev
+  - travis_retry composer install --no-interaction --prefer-source
 
 script:
-  - vendor/bin/phpspec run --config=phpspec.yml.dist --no-interaction
+  - vendor/bin/php-cs-fixer fix --dry-run -v
+  - vendor/bin/phpunit --verbose
 
 matrix:
   fast_finish: true
