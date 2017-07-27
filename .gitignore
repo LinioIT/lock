@@ -2,3 +2,4 @@ phpspec.yml
 composer.lock
 .idea
 vendor/
+/.php_cs.cache

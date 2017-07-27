@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types=1);
 
 namespace Linio\Lock;
 
@@ -19,7 +19,7 @@ class Process
     /**
      * @return string
      */
-    public function getApplicationName() : string
+    public function getApplicationName(): string
     {
         return basename($_SERVER['argv'][0]);
     }
@@ -31,7 +31,7 @@ class Process
      *
      * @return bool
      */
-    public function isApplicationProcess($pid) : bool
+    public function isApplicationProcess($pid): bool
     {
         // This is a workaround to avoid the grep processs to be match
         $grepProofPid = preg_replace('/([\d]+)(\d)$/', '$1[$2]', $pid);

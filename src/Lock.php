@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Linio\Lock;
 
 class Lock
@@ -41,7 +43,7 @@ class Lock
     /**
      * @return string
      */
-    public function getPath() : string
+    public function getPath(): string
     {
         if (empty($this->path)) {
             return sys_get_temp_dir();
@@ -61,7 +63,7 @@ class Lock
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -69,7 +71,7 @@ class Lock
     /**
      * @return string
      */
-    public function getFileName() : string
+    public function getFileName(): string
     {
         return $this->getPath() . DIRECTORY_SEPARATOR . $this->getName() . '.lock';
     }
@@ -77,7 +79,7 @@ class Lock
     /**
      * @return bool
      */
-    public function isLocked() : bool
+    public function isLocked(): bool
     {
         $locked = file_exists($this->getFileName());
 

@@ -20,6 +20,7 @@
     },
     "require-dev": {
         "phpspec/phpspec": "^3.0",
-        "mikey179/vfsStream": "^1.6"
+        "mikey179/vfsStream": "^1.6",
+        "friendsofphp/php-cs-fixer": "^2.4"
     }
 }
